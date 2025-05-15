@@ -47,7 +47,7 @@ button {
   width: 476px;
   height: 615px;
   border-radius: 12px;
-  /* box-shadow: 0 25px 121px rgba(0, 0, 0, 1.5); */
+  box-shadow: 0 25px 121px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,8 +179,6 @@ button {
   background-color: var(--hover-bg);
 }
 
-/* .counter__button--increase, */
-/* .counter__button--decrease, */
 .counter__button-ten {
   border-top: 2px solid rgba(189, 254, 0, 0.15);
 }
@@ -226,7 +224,6 @@ button {
 
 .counter__reset-icon {
   font-size: 35px;
-  /* transition: all 0.4s; */
 }
 
 .footer {
@@ -234,13 +231,22 @@ button {
     color: var(--text-color);
 }
 
+.copyright--alt {
+  color: var(--primary-bg);
+}
+
 .footer__pill {
-    background-color: var(--primary-bg);
+    background-color: var(--secondary-bg);
     border-radius: 10px;
     margin-top: 50px;
     padding: 10px;
     box-shadow: 0 25px 121px rgba(0, 0, 0, 1.5);
-    animation: fade-in 1s 0.4s backwards;
+    animation: fade-in 1s 0.2s backwards;
+}
+
+.portfolio__link {
+    text-decoration: none;
+      color: inherit;
 
 }
 
