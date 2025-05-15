@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+
+    <title>Roman Numeral Converter</title>
+  </head>
+  <body>
+
+    <div class="app__container">
+      <h1 class="title">Roman Numeral Converter</h1>
+
+      <form id="form" class="form">
+        <fieldset class = "fieldset">
+          <label class = "label" for="number">Enter a Number:</label><br />
+          <input type="number" class = "number__input" id="number" min="0" max="3999" required />
+        </fieldset>
+      </form>
+      <div class="output-container">
+        <div id="output" class="output hidden"></div>
+      </div>
+
+      <div class="counter__buttons">
+        <button class="counter__button counter__button--decrease">
+          <i class="fas fa-minus counter__icon counter__icon--minus"></i>
+        </button>
+        <button class="counter__button counter__button--increase">
+          <i class="fas fa-plus counter__icon counter__icon--plus"></i>
+        </button>
+      </div>
+
+      <div class="counter__buttons-ten">
+        <button class="counter__button-ten counter__button--decrease-ten">
+          <i class="fas fa-minus counter__icon counter__icon--minus"></i>
+        </button>
+        <button class="counter__button-ten counter__button--increase-ten">
+          <i class="fas fa-plus counter__icon counter__icon--plus"></i>
+        </button>
+      </div>
+
+      <div class="counter__buttons-action">
+        <button type="button" id="delete-btn" class="counter__button-action counter__reset-button">
+          <i class="fas fa-trash counter__reset-icon"></i>
+        </button>
+        <button class="counter__button-action counter__button--convert" id = "convert-btn">
+          <i class="fas fa-exchange counter__icon counter__icon--plus"></i>
+        </button>
+      </div>
+
+    </div>
+    
+  </body>
+</html>

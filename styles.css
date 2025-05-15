@@ -1,0 +1,248 @@
+:root {
+  --primary-bg: #bef227;
+  --secondary-bg: #1d2507;
+  --hover-bg: #212b06;
+  --text-color: #1d2507;
+  --highlight-color: #bef227;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* KEYFRAMES */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  background-image: radial-gradient(ellipse, #385300, #2d4300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* App container */
+.app__container {
+  background-color: var(--primary-bg);
+  width: 476px;
+  height: 615px;
+  border-radius: 12px;
+  box-shadow: 0 25px 121px rgba(0, 0, 0, 1.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 1s 0.2s backwards;
+}
+
+.counter--limit {
+  background-color: var(--primary-bg);
+}
+
+/* Form Styling */
+.form {
+  border: none;
+}
+
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fade-in 1s 0.4s backwards;
+}
+
+.label {
+  font-size: 18px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 300px;
+  animation: fade-in 1s 0.4s backwards;
+}
+
+.number__input {
+  border: 1px solid black;
+  background: var(--primary-bg);
+  font-size: 50px;
+  text-align: center;
+  width: 50%;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+/* Counter title */
+.title {
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 300px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 30px 0;
+}
+
+
+.output {
+  color: var(--text-color);
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.output-container {
+  height: 200px; /* Fixed height to prevent movement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.output {
+  color: var(--text-color);
+  font-size: 30px;
+  font-weight: 600;
+  width: 80%;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+/* Error styling */
+.alert {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+/* Input field styling */
+.input__value {
+  color: var(--text-color);
+  background-color: var(--primary-bg);
+  font-size: 100px;
+  font-weight: 600;
+  margin-top: 40px;
+  border: none;
+  outline: none;
+  width: 50%;
+}
+
+/* Button sections */
+.counter__buttons,
+.counter__buttons-ten,
+.counter__buttons-action {
+  background-color: var(--secondary-bg);
+  height: 116px;
+  width: 100%;
+  display: flex;
+
+}
+
+.counter__button,
+.counter__button-ten,
+.counter__button-action {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter__button:hover,
+.counter__button-ten:hover,
+.counter__button-action:hover {
+  background-color: var(--hover-bg);
+}
+
+.counter__button--decrease,
+.counter__button-ten {
+  border-top: 1px solid rgba(189, 254, 0, 0.15);
+}
+
+.counter__button--increase,
+.counter__button--increase-ten {
+  border-left: 1px solid rgba(189, 254, 0, 0.15);
+}
+
+.counter__icon {
+  color: var(--highlight-color);
+  opacity: 0.9;
+  font-size: 40px;
+  animation: fade-in 1s 0.4s backwards;
+}
+
+.counter__button-ten::after {
+  content: "10";
+  font-size: 40px;
+  color: var(--highlight-color);
+  font-weight: bold;
+  margin-left: 5px;
+  animation: fade-in 1s 0.4s backwards;
+}
+
+/* Action buttons */
+.counter__buttons-action {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 1px solid rgba(189, 254, 0, 0.15);
+}
+
+.counter__button--convert {
+  border-left: 1px solid rgba(189, 254, 0, 0.15);
+}
+
+.counter__reset-button {
+  color: var(--highlight-color);
+  animation: fade-in 1s 0.4s backwards;
+}
+
+.counter__reset-icon {
+  font-size: 35px;
+  /* transition: all 0.4s; */
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+    background-color: #bef227;
+  }
+  .app__container {
+    background-color: #bef227;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .counter__buttons-action {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+}
